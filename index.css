@@ -80,10 +80,6 @@ body{
   transition: all .3s ease;
 }
 
-.searchBox{
-  margin-top: 6rem;
-}
-
 .searchBox p{
   color: var(--foreground);
 }
@@ -168,3 +164,7 @@ footer{
 .mobile{
   display: none;
 }
+
+/* @media screen and (max-width: 640px){
+
+} */

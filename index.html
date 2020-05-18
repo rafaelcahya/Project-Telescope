@@ -13,7 +13,7 @@
 
 <body onload="greetingMsg(); time();">
   <div class="body flex flex-col h-screen antialiased theme" id="non-mobile-view">
-    <nav class="flex my-5 mx-8">
+    <nav class="hidden sm:flex my-5 mx-8">
       <a href="https://www.google.com" rel="noopener" class="">
         <img src="./component/img/google.png" alt="Google" class="w-20">
       </a>
@@ -23,8 +23,8 @@
       </div>
     </nav>
 
-    <main class="searchBox text-center mb-auto">
-      <p class="text-4xl mb-12">Welcome to <span class="relative underlineAnim" >Project Telescope</span></p>
+    <main class="searchBox text-center mb-auto mt-40 sm:mt-24">
+      <p class="sm:text-4xl text-2xl  mb-12">Welcome to <span class="relative underlineAnim" >Project Telescope</span></p>
       <form action="https://www.google.com/search" method="GET" name="input" id="form">
         <input type="text" name="q" class="text-black text-center outline-none mb-5" id="search-form" placeholder="Search or type a URL" autocomplete="off" autocapitalize="off" autofocus aria-label="q" rel="noopener" onclick="mobileView()">
       </form>

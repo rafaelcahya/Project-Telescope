@@ -16,7 +16,7 @@
     "postcss-import": "^12.0.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "cssnano": "^4.1.10",
     "tailwindcss": "^1.0.6"
   }

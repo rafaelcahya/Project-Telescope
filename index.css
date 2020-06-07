@@ -18,6 +18,7 @@
 
   --background: var(--clr-light-1);
   --foreground: var(--clr-dark-1);
+  --form-foreground: var(--clr-light-1);
 
   --border: var(--clr-dark-2);
   --border-focus: var(--clr-blue-1);
@@ -39,6 +40,7 @@
   
   --background: var(--clr-dark-1);
   --foreground: var(--clr-light-2);
+  --form-foreground: var(--clr-light-1);
 
   --border: var(--clr-light-1);
   --border-focus: var(--clr-none);
@@ -49,83 +51,56 @@
   transition: 300ms;
 }
 
-.border{
-  border-radius: 20px;
-}
-
 body{
   background-color: var(--background);
-}
-
-.timeBox{
   color: var(--foreground);
 }
 
-.underlineAnim:after {
-  content: '';
-  width: 0;
-  height: 1.5px;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  background-color: var(--foreground);
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+form{
+  width: 30rem;
+  background: var(--form-foreground);
+  border-radius: 5px;
+  border: 1px solid var(--border);
 }
 
-.underlineAnim:hover:after {
-  width: 100%;
-  left: 0%;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+form:hover{
+  box-shadow: 0 0 2px 1px var(--clr-dark-2);
 }
 
-.searchBox p{
-  color: var(--foreground);
+.logo{
+  animation: logo 1500ms infinite linear;
 }
 
-.searchBox form input{
-  height: 2.6rem;
-  width: 45%;
-  border-bottom: 1.3px solid var(--border);
+@keyframes logo{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+input{
+  width: 28rem;
+  border: none;
 }
 
 input::-webkit-input-placeholder{
   color: var(--clr-gray-1);
-}
-
-.searchBox form input:focus{
-  border-bottom: 1.3px solid var(--border-focus);
-  animation: underline 500ms;
-}
-
-@keyframes underline{
-  from{
-    width: 0;
-    border-bottom: 1.3px solid var(--border-clr-gray);
-  }
-}
-
-.searchBox form input:focus::placeholder {
-  color: transparent;
+  font-size: small;
 }
 
 @media only screen and (max-width: 700px){
-  .searchBox form input{
-    width: 75%;
-  }
-
-  .searchBox form input:focus{
-    width: 75%;
+  form{
+    width: 20rem;
   }
 }
 
 .fa-microphone{
-  border: 1.3px solid var(--border-mic);
+  border: 1px solid var(--clr-dark-2);
+  border-radius: 20px;
 }
 
 .fa-microphone:hover{
-  border: 1.3px solid var(--clr-red-1);
+  border: 1px solid var(--clr-red-1);
+  box-shadow: 0 0 2px 1px var(--clr-red-1);
 }
 
 footer{
@@ -163,4 +138,23 @@ footer{
 
 .mobile{
   display: none;
+}
+
+.underlineAnim:after {
+  content: '';
+  width: 0;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--foreground);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.underlineAnim:hover:after {
+  width: 100%;
+  left: 0%;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
 }

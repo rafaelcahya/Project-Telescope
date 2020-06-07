@@ -103,7 +103,6 @@ const lightModeToggle = document.querySelector('#lightModeToggle');
 
 const disableDarkMode = () => {
   document.body.classList.remove("darkmode");
-  document.getElementById('search-form').classList.remove("border");
   document.body.classList.add("lightmode");
   localStorage.setItem("darkMode", null)
 };

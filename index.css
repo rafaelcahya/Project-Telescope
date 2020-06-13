@@ -80,6 +80,7 @@ form:hover{
 input{
   width: 28rem;
   border: none;
+  color: var(--clr-dark-1);
 }
 
 input::-webkit-input-placeholder{

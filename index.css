@@ -57,7 +57,7 @@ body{
 }
 
 form{
-  width: 30rem;
+  width: 40rem;
   background: var(--form-foreground);
   border-radius: 5px;
   border: 1px solid var(--border);
@@ -78,7 +78,8 @@ form:hover{
 }
 
 input{
-  width: 28rem;
+  width: 38rem;
+  height: 2rem;
   border: none;
   color: var(--clr-dark-1);
 }

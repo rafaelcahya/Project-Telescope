@@ -1,4 +1,4 @@
-@font-face{
+@font-face {
   font-family: spartan;
   src: url(./component/font/Spartan-Regular.ttf);
 }
@@ -7,7 +7,8 @@
   font-family: spartan;
 }
 
-:root, .lightmode{
+:root,
+.lightmode {
   --clr-light-1: #ffffff;
   --clr-light-2: #edf2f7;
   --clr-dark-1: #1a202c;
@@ -25,11 +26,11 @@
 
   --border-mic: var(--clr-gray-1);
   --border-hover-mic: var(--clr-red-1);
-  
+
   transition: 300ms;
 }
 
-.darkmode{
+.darkmode {
   --clr-none: rgba(0, 0, 0, 0);
   --clr-light-1: #ffffff;
   --clr-light-2: #edf2f7;
@@ -37,108 +38,102 @@
   --clr-dark-2: rgba(0, 0, 0, 0.17);
   --clr-blue-1: #90cdf4;
   --clr-gray-1: #718096;
-  
+
   --background: var(--clr-dark-1);
   --foreground: var(--clr-light-2);
   --form-foreground: var(--clr-light-1);
 
   --border: var(--clr-light-1);
   --border-focus: var(--clr-none);
-  
+
   --border-mic: var(--clr-light-1);
   --border-hover-mic: var(--clr-red-1);
 
   transition: 300ms;
 }
 
-body{
+body {
   background-color: var(--background);
   color: var(--foreground);
 }
 
-form{
+form>div {
+  position: relative;
+}
+
+form>div>label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  transition: 0.2s;
+  z-index: -1;
+}
+
+form>div>input {
   width: 40rem;
-  background: var(--form-foreground);
-  border-radius: 5px;
-  border: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background-color: transparent;
 }
 
-form:hover{
-  box-shadow: 0 0 2px 1px var(--clr-dark-2);
-}
-
-.logo{
-  animation: logo 1500ms infinite linear;
-}
-
-@keyframes logo{
-  to{
-    transform: rotate(360deg);
-  }
-}
-
-input{
-  width: 38rem;
-  height: 2rem;
-  border: none;
-  color: var(--clr-dark-1);
-}
-
-input::-webkit-input-placeholder{
-  color: var(--clr-gray-1);
+form div input:focus+label {
+  top: -10px;
+  left: 0;
+  transform: translateX(0);
   font-size: small;
 }
 
-@media only screen and (max-width: 700px){
-  form{
+@media only screen and (max-width: 700px) {
+  form {
     width: 20rem;
   }
 }
 
-.fa-microphone{
+.fa-microphone {
   border: 1px solid var(--clr-dark-2);
   border-radius: 20px;
 }
 
-.fa-microphone:hover{
+.fa-microphone:hover {
   border: 1px solid var(--clr-red-1);
   box-shadow: 0 0 2px 1px var(--clr-red-1);
 }
 
-.theme-container{
+.theme-container {
   width: fit-content;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 
-#theme{
+#theme {
   display: none;
   border-left: 1.3px solid var(--clr-gray-1);
 }
 
-.fa-palette{
+.fa-palette {
   color: var(--clr-dark-1);
 }
 
-.light{
+.light {
   background-color: var(--clr-light-1);
   border: 1px solid black;
   border-radius: 5px;
 }
 
-.dark{
+.dark {
   background-color: var(--clr-dark-1);
   border: 1px solid white;
   border-radius: 5px;
 }
 
-.error, .mobile{
+.error,
+.mobile {
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.mobile{
+.mobile {
   display: none;
 }
 

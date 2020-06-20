@@ -20,13 +20,13 @@
       </div>
     </nav>
 
-    <main class="flex flex-col justify-center items-center text-center mb-auto py-12">
-      <p class="title relative underlineAnim text-center sm:text-5xl text-2xl m-12">Project Telescope</p>
-      <form action="https://www.google.com/search" method="GET" name="input" id="form" class=" cursor-text">
-        <div class="">
-          <input type="text" name="q" class="text-sm outline-none" id="search-form" autocomplete="off"
+    <main class="flex flex-col justify-center items-center text-center mb-auto">
+      <p class="title text-center sm:text-4xl text-2xl m-12">Project Telescope</p>
+      <form action="https://www.google.com/search" method="GET" name="input" id="form" class="pt-12 cursor-text">
+        <div class="formgroup">
+          <input type="text" name="q" class="input text-sm outline-none" id="search-form" autocomplete="off"
             autocapitalize="off" aria-label="q" rel="noopener">
-          <label for="" class="">Search or type a URL</label>
+          <label for="" class="label text-sm">Search or type a URL with Google</label>
         </div>
       </form>
 
@@ -57,7 +57,9 @@
   <main class="mobile" id="mobile">
     <p class="text-center tracking-widest">The site is currently not supported for mobile devices(600x350).</p>
   </main>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="index.js"></script>
+  <script src="search.js"></script>
 
 </body>
 

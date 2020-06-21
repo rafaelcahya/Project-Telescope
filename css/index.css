@@ -1,0 +1,135 @@
+@font-face {
+  font-family: spartan;
+  src: url(../component/font/Spartan-Regular.ttf);
+}
+
+.light-mode {
+  --black: #212529;
+  --white: #FFFFFF;
+  --blue: #1b6ca8;
+  --red: #FD413C;
+  --background: var(--white);
+  --foreground: var(--black);
+  --foreground2: var(--blue);
+  --foreground3: var(--red);
+
+  transition: all .3s;
+}
+
+.dark-mode {
+  --black: #212529;
+  --white: #FFFFFF;
+  --blue: #1b6ca8;
+  --red: #FD413C;
+  --background: var(--black);
+  --foreground: var(--white);
+  --foreground2: var(--white);
+  --foreground3: var(--red);
+
+  transition: all .3s;
+}
+
+* {
+  font-family: spartan;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.form-container {
+  position: relative;
+}
+
+label,
+input {
+  touch-action: manipulation;
+}
+
+label {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 100%;
+  transition: all .3s;
+  z-index: -1;
+}
+
+input {
+  padding: 5px 15px;
+  width: 40rem;
+  border-bottom: 1px solid var(--foreground);
+  background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+  input {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  input {
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  input {
+    width: 20rem;
+  }
+}
+
+input:focus {
+  box-shadow: none;
+  border-bottom: 1px solid var(--foreground2);
+}
+
+input:focus~label {
+  color: var(--foreground2);
+  top: -15px;
+  font-size: 0.7rem;
+}
+
+label.active {
+  color: var(--foreground2);
+  top: -15px;
+  font-size: 0.7rem;
+}
+
+.speech-button {
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  border-radius: 20px;
+}
+
+.speech-button:hover {
+  border: 1px solid var(--foreground3);
+  box-shadow: 0 0 2px 1px var(--foreground3);
+}
+
+.theme-container {
+  border: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.panel {
+  display: none;
+  border-left: 1.3px solid rgba(0, 0, 0, 0.17);
+}
+
+.theme-button {
+  color: var(--black);
+}
+
+.light-button {
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.dark-button {
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  border-radius: 5px;
+}

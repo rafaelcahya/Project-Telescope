@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, width=device-width, height=device-height, viewport-fit=cover">
   <meta name="description" content="Project Telescope is a search site page that is still being developed by the team">
-  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-  <link rel="stylesheet" href="./css/tailwind.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <link rel="stylesheet" href="../css/index.css">
   <title>Search</title>
 </head>
 <!-- onload="greetingMsg(); time();" -->
 
-<body>
+<body class="body">
   <div class="body flex flex-col h-screen antialiased" id="non-mobile-view">
     <nav class="hidden sm:flex my-5 mx-8">
       <div class="timeBox ml-auto">
@@ -23,8 +23,9 @@
 
     <main class="flex flex-col justify-center items-center text-center mb-auto">
       <p class="title text-center sm:text-4xl text-2xl m-12">Project Telescope</p>
-      <form action="https://www.google.com/search" method="GET" name="input" id="form" class="pt-12 cursor-text">
-        <div class="formgroup">
+      <form action="https://www.google.com/search" method="GET" name="input" id="form"
+        class="pt-32 sm:pt-12 cursor-text">
+        <div class="form-container">
           <input type="text" name="q" class="input speech-text-trigger text-sm outline-none" autocomplete="off"
             autocapitalize="off" aria-label="q" rel="noopener">
           <label for="" class="label text-sm">Search or type a URL with Google</label>
@@ -44,8 +45,8 @@
         <div class="theme-button fas fa-palette flex px-4 py-2"></div>
         <div class="panel">
           <div class="flex">
-            <p class="light h-5 w-5 ml-4" id="lightModeToggle"></p>
-            <p class="dark h-5 w-5  mx-4" id="darkModeToggle"></p>
+            <p class="light-button h-5 w-5 ml-4" id="lightModeToggle"></p>
+            <p class="dark-button h-5 w-5  mx-4" id="darkModeToggle"></p>
           </div>
         </div>
       </div>
@@ -56,16 +57,12 @@
       </div>
     </footer>
   </div>
-
-  <main class="mobile" id="mobile">
-    <p class="text-center tracking-widest">The site is currently not supported for mobile devices(600x350).</p>
-  </main>
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="index.js"></script>
-  <script src="search.js"></script>
-  <script src="greeting.js"></script>
-  <script src="speech.js"></script>
-  <script src="theme.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../javascript/index.js"></script>
+  <script src="../javascript/search.js"></script>
+  <script src="../javascript/greeting.js"></script>
+  <script src="../javascript/speech.js"></script>
+  <script src="../javascript/theme.js"></script>
 
 </body>
 

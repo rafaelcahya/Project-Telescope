@@ -13,7 +13,7 @@
 <!-- onload="greetingMsg(); time();" -->
 
 <body>
-  <div class="body flex flex-col h-screen antialiased theme" id="non-mobile-view">
+  <div class="body flex flex-col h-screen antialiased" id="non-mobile-view">
     <nav class="hidden sm:flex my-5 mx-8">
       <div class="timeBox ml-auto">
         <p class="greet-messages text-sm md:text-md"></p>
@@ -41,10 +41,12 @@
     <footer class="my-5 mx-8 flex items-center justify-between">
       <div class="theme-container bg-white flex items-center rounded-lg">
         <!-- <p class="tracking-widest">The site is currently under development.</p> -->
-        <p class="fas fa-palette flex  px-4 py-2 " onclick="theme()"></p>
-        <div class="z-10 flex w-0 overflow-hidden" id="theme">
-          <p class="light h-5 w-5 ml-4" id="lightModeToggle"></p>
-          <p class="dark h-5 w-5  mx-4" id="darkModeToggle"></p>
+        <div class="theme-button fas fa-palette flex px-4 py-2"></div>
+        <div class="panel">
+          <div class="flex">
+            <p class="light h-5 w-5 ml-4" id="lightModeToggle"></p>
+            <p class="dark h-5 w-5  mx-4" id="darkModeToggle"></p>
+          </div>
         </div>
       </div>
 
@@ -63,6 +65,7 @@
   <script src="search.js"></script>
   <script src="greeting.js"></script>
   <script src="speech.js"></script>
+  <script src="theme.js"></script>
 
 </body>
 

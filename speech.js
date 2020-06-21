@@ -1,33 +1,34 @@
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
-recognition.lang = 'id', 'en';
+(recognition.lang = "id"), "en";
 
-const desc = $(".speech-trigger")
-const content = $(".speech-text-trigger")
-const btn = $(".speech-button")
+const desc = $(".speech-trigger");
+const content = $(".speech-text-trigger");
+const btn = $(".speech-button");
 
 recognition.onresult = function (event) {
-    const current = event.resultIndex;
-    const transcript = event.results[current][0].transcript;
-    content.value = transcript;
+  const current = event.resultIndex;
+  const transcript = event.results[current][0].transcript;
+  content.val(transcript);
 
-    desc.html("Search")
-    setTimeout(function () {
-        document.input.submit() //<form name="input">
-    }, 1000)
-}
+  desc.html("Search");
+  setTimeout(function () {
+    document.input.submit(); //<form name="input">
+  }, 1000);
+};
 
-btn.bind('click', () => {
-    btn.css("color", "red")
-    desc.html("What can i help?")
-    recognition.start();
-})
+btn.bind("click", () => {
+  btn.css("color", "red");
+  desc.html("What can i help?");
+  recognition.start();
+});
 
-btn.bind('dblclick', () => {
-    btn.css("color", "#2d3748")
-    desc.html("")
-    recognition.stop();
-})
+btn.bind("dblclick", () => {
+  btn.css("color", "#2d3748");
+  desc.html("");
+  recognition.stop();
+});
 
 // const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 // const recognition = new SpeechRecognition();

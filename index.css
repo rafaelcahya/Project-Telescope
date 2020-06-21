@@ -7,57 +7,12 @@
   font-family: spartan;
 }
 
-:root,
-.lightmode {
-  --clr-light-1: #ffffff;
-  --clr-light-2: #edf2f7;
-  --clr-dark-1: #1a202c;
-  --clr-dark-2: rgba(0, 0, 0, 0.17);
-  --clr-blue-1: #90cdf4;
-  --clr-gray-1: #718096;
-  --clr-red-1: #f56565;
-
-  --background: var(--clr-light-1);
-  --foreground: var(--clr-dark-1);
-  --form-foreground: var(--clr-light-1);
-
-  --border: var(--clr-dark-2);
-  --border-focus: var(--clr-blue-1);
-
-  --border-mic: var(--clr-gray-1);
-  --border-hover-mic: var(--clr-red-1);
-
-  transition: 300ms;
-}
-
-.darkmode {
-  --clr-none: rgba(0, 0, 0, 0);
-  --clr-light-1: #ffffff;
-  --clr-light-2: #edf2f7;
-  --clr-dark-1: #1a202c;
-  --clr-dark-2: rgba(0, 0, 0, 0.17);
-  --clr-blue-1: #90cdf4;
-  --clr-gray-1: #718096;
-
-  --background: var(--clr-dark-1);
-  --foreground: var(--clr-light-2);
-  --form-foreground: var(--clr-light-1);
-
-  --border: var(--clr-light-1);
-  --border-focus: var(--clr-none);
-
-  --border-mic: var(--clr-light-1);
-  --border-hover-mic: var(--clr-red-1);
-
-  transition: 300ms;
-}
-
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #ffffff;
+  color: #1a202c;
 }
 
-form > div {
+form>div {
   position: relative;
 }
 
@@ -78,7 +33,7 @@ label {
 input {
   padding: 5px 15px;
   width: 40rem;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
   background-color: transparent;
 }
 
@@ -87,7 +42,7 @@ input:focus {
   border-bottom: 1px solid #1b6ca8;
 }
 
-input:focus ~ label {
+input:focus~label {
   color: #1b6ca8;
   top: -15px;
   font-size: 0.7rem;
@@ -106,37 +61,36 @@ label.active {
 }
 
 .fa-microphone {
-  border: 1px solid var(--clr-dark-2);
+  border: 1px solid rgba(0, 0, 0, 0.17);
   border-radius: 20px;
 }
 
 .fa-microphone:hover {
-  border: 1px solid var(--clr-red-1);
-  box-shadow: 0 0 2px 1px var(--clr-red-1);
+  border: 1px solid #f56565;
+  box-shadow: 0 0 2px 1px #f56565;
 }
 
 .theme-container {
-  width: fit-content;
-  border: 1px solid var(--clr-dark-2);
+  border: 1px solid rgba(0, 0, 0, 0.17);
 }
 
-#theme {
+.panel {
   display: none;
-  border-left: 1.3px solid var(--clr-gray-1);
+  border-left: 1.3px solid #718096;
 }
 
 .fa-palette {
-  color: var(--clr-dark-1);
+  color: #1a202c;
 }
 
 .light {
-  background-color: var(--clr-light-1);
+  background-color: #ffffff;
   border: 1px solid black;
   border-radius: 5px;
 }
 
 .dark {
-  background-color: var(--clr-dark-1);
+  background-color: #1a202c;
   border: 1px solid white;
   border-radius: 5px;
 }
@@ -160,7 +114,7 @@ label.active {
   position: absolute;
   bottom: 0;
   left: 50%;
-  background-color: var(--foreground);
+  background-color: #1a202c;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }

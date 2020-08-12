@@ -38,30 +38,19 @@ body {
   color: var(--foreground);
 }
 
+img{
+  z-index: -1;
+  background-position: center center;
+  background-size: cover;
+}
+
 .form-container {
   position: relative;
 }
 
-label,
 input {
-  touch-action: manipulation;
-}
-
-label {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translatex(-50%);
-  width: 100%;
-  transition: all .3s;
-  z-index: -1;
-}
-
-input {
-  padding: 5px 15px;
+  padding: 10px 15px;
   width: 40rem;
-  border-bottom: 1px solid var(--foreground);
-  background-color: transparent;
 }
 
 @media screen and (max-width: 768px) {
@@ -80,23 +69,6 @@ input {
   input {
     width: 20rem;
   }
-}
-
-input:focus {
-  box-shadow: none;
-  border-bottom: 1px solid var(--foreground2);
-}
-
-input:focus~label {
-  color: var(--foreground2);
-  top: -15px;
-  font-size: 0.7rem;
-}
-
-label.active {
-  color: var(--foreground2);
-  top: -15px;
-  font-size: 0.7rem;
 }
 
 .speech-button {
